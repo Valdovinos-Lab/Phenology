@@ -1,6 +1,5 @@
 # Phenology
 Matlab code used in Glaum et al 2020.
-
 Phenology Pollination Model Tutorial
 Descriptive summary of the phenology pollination model
 Paul Glaum prglaum@ucdavis.edu & Fernanda S. Valdovinos fvaldovinos@ucdavis.edu 
@@ -16,7 +15,8 @@ Simulations are run and output is produced using the “run_Phenology_model” c
 3.) The model is run on plant-pollinator networks input into the main function. The input network should be a text file of 1s and 0s identifying potential pollination interactions. Plants are enumerated along the rows of the networks and pollinators along the columns. Examples are available in our 3 fully connected networks included in this tutorial, but the model runs on other networks, empirical or otherwise. Use the following to load in network text file of your choosing. The example below loads our 30 plant by 50 pollinator fully connected network:
 In=sparse(load('fullConnected-30x50.txt'));
 
-4.) Input parameters:
+4.) 
+Input parameters:
 In: The text file of the network describing potential plant-pollinator interactions. 
 bloomSpan: The number of time steps in each flowering plant’s bloom period. 
 breakValue: The number of cycles between subsequent bloom periods. 
@@ -34,7 +34,8 @@ bloomSpan=50; breakValue=3; flightSpan=30; breakValueF=3;
  
 
 
-7.) Simulation Output:
+7.) 
+Simulation Output:
 pI = initial plant density (t=0; note, we don’t use pi to avoid confusion with π in Matlab)
 nectari = initial floral reward density (t=0)
 ai = initial animal pollinator density (t=0)
@@ -65,4 +66,5 @@ v_SD = the standard deviation of the pairwise differences in alpha values
 v_CV **= the coefficient of variance in the alpha values
 **Metrics presented in our analysis
 
-
+9.) Simulation results data used to recreate Figure 2, Figure 3, and Figures S7-S10 is available at the public google drive at https://tinyurl.com/y5sexjzs 
+Note, the data is large, >3.5 Gb
